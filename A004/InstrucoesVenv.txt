@@ -1,0 +1,15 @@
+virtualenv .venv
+.venv/Scripts/activate
+pip install SQLAlchemy
+pip install psycopg2
+
+# Pode ser necessário atualizar o PIP 
+# e instalar : pip install psycopg2-binary
+
+pip install pandas
+
+#Para usar o ipython
+pip install "ipython"
+ipython
+quit()
+

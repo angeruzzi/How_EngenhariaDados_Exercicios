@@ -1,0 +1,2 @@
+requests==6.2.4
+pytest-cov==2.4.7

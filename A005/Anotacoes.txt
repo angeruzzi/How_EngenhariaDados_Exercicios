@@ -1,0 +1,9 @@
+Principios da OOP
+
+- Cada Classe deve ter uma única responsabilidade
+- As entidades devem ser abertas para extensão, mas fechadas para modificação
+
+
+API
+https://www.mercadobitcoin.com.br/api-doc/
+

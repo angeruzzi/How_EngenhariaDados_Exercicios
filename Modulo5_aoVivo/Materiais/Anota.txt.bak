@@ -1,0 +1,39 @@
+https://pypi.org/project/fake-web-events/
+
+00:20:00 - código
+
+00:20:00 - Criação do Bucket na AWS
+
+00:30:00 - Kinesis
+
+00:53:40 - AWS Glue - Crawler
+		 
+01:26:00 - Athena
+
+
+
+S3 BUCKET : how-data-lake-aula1
+Kinesis - Delivery streams: How-AulaKinesis
+AWS Glue - Crawler: demo-aulaHow
+
+
+Configuração: 
+
+Amazon Kinesis Data Firehose
+Em S3 bucket prefix - optional: Para particionar os arquivos por dia
+events/landing-date=!{timestamp:yyyy}-!{timestamp:MM}-!{timestamp:dd}/
+
+Crawler
+Caminho: S3 / how-data-lake-aula1 / events
+AWSGlueServiceRole (ex): demo-aulaHow
+Database: demo-aulaHow
+Configuration options: V Update all news and existing ...
+Seleciona o Crawler e roda RUN
+
+
+Athena
+SELECT * FROM ""."events"
+WHERE "landing-date" = '2022-01-18'
+
+
+

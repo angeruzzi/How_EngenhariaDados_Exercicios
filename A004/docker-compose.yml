@@ -1,0 +1,29 @@
+version: "3"
+services:
+  db:
+      image: postgres
+      container_name: "pg_container"
+      environment:
+        - POSTGRES_USER=root
+        - POSTGRES_PASSWORD=root
+        - POSTGRES_DB=test_db
+      ports:
+        - "5432:5432"
+      volumes:
+        - "/db:/var/lib/postgresql/data/"
+
+  bi:
+      image: metabase/metabase
+      ports: 
+          - "3000:3000"
+      links:
+          - db
+
+#Comandos no terminal 
+#docker-compose up db     : executar, cria a rede e sobe o container com o banco db configurado
+#Ctrl + C                 : finaliza a execução do container
+#docker-compose down      : necessário para matar a rede que foi criada e remover o container
+#docker-compose up -d db  : o parâmetro -d faz a execução mantendo o terminal liberado
+#docker ps                : Ver os Containers ativos
+#docker-compose           : 
+#docker stop CONTAINER_ID : Para o container

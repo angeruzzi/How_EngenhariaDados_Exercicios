@@ -1,0 +1,9 @@
+SELENIUM
+1)
+$ virtualenv venv
+$ pip install ipython pandas selenium
+
+2)
+pip install pandas
+pip install html5lib
+pip install lxml 

@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./mercado_bitcoin"
+    ]
+}
